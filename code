@@ -1,0 +1,56 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+namespace сортировка_списка
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            List<int> a = new List<int>();
+            Random rList = new Random();
+
+            for (int i = 0; i < 1000; i++) // заполняет список рандомными значениями 
+            {
+                int fullList = rList.Next(0, 1000);
+                a.Add(fullList);
+            }
+
+            int numList = a.Count<int>();
+            int numOfinspect1 = 0;
+
+            while (numOfinspect1 < numList)
+            {
+                numOfinspect1++;
+                int numOfinspect2 = 0;
+                int position = 0;
+
+                while (numOfinspect2 <= numList)
+                {
+                if (a[position] > a[position + 1])  //меняет числа которые стоят рядом
+                    {
+                    int num = a[position];
+                    a[position] = a[position + 1]; 
+                        a[position + 1] = num;
+                    }
+
+                    if (position < numList -2)  // контролирует чтобы список не вышел за рамки
+                    {
+                        position++;
+                    }
+                    numOfinspect2++;
+                }
+            }
+
+            for (int i = 0; i < numList; i++) //проверить сортировку
+            {
+                Console.WriteLine(a[i]);
+            }
+            Console.WriteLine("количество позиций в списке: " + numList);
+            Console.ReadKey();
+
+        }
+    }
+}
