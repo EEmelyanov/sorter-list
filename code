@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-namespace сортировка_списка
+namespace Sorter_list_program
 {
     class Sorter_list
     {
