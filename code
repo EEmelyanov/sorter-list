@@ -5,7 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 namespace сортировка_списка
 {
-    class Program
+    class Sorter_list
     {
         static void Main(string[] args)
         {
